@@ -38,6 +38,23 @@
 .blog-post-navbar a:hover {
   color: var(--green-medium-color);
 }
+.btn-new-post{
+  /* width: 40%; */
+  padding: 6px;
+  border: none;
+  background-color:var(--green-medium-color);
+  color: white;
+  font-size: medium;
+  font-weight: bold;
+  border-radius: .5em;
+}
+.btn-new-post:hover{
+  position: relative;
+  background-color: rgba(5, 160, 129, 0.5);
+  /* opacity: 1; */
+  top: -2px;
+}
+
 
 .blog-post-feature {
   display: flex;
@@ -61,7 +78,7 @@
 
 .blog-post {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   margin-left: 12px !important;
   margin-right: 12px !important;
   margin-bottom: 60px;
@@ -91,4 +108,20 @@
 
 .blog-post-details p {
   color: var(--oxford-color-gray);
+}
+
+.btn-edit-post {
+  width: 40%;
+  padding: 5px;
+  border: none;
+  background-color:var(--green-medium-color);
+  color: white;
+  font-size: medium;
+  font-weight: bold;
+}
+
+.btn-edit-post:hover {
+  position: relative;
+  background-color: rgba(5, 160, 129, 0.5);
+  top: -2px;
 }

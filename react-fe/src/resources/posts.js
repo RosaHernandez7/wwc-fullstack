@@ -13,6 +13,7 @@ const posts = () => {
       body:"According to the US Bureau of Labor Statistics, job possibilities in software development will expand by 22% from 2020 to 2030, well"
     }]
   );
+
 }
 
 export default posts;

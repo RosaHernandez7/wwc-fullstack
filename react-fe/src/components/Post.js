@@ -17,11 +17,11 @@ const Post = ({post, onEdit, index}) => {
           Read More
         </Link>
       </div>
-      <button
+      {/* <button
         onClick={()=>onEdit()}
       >
         Edit
-      </button>
+      </button> */}
     </div>
   );
 }

@@ -30,7 +30,7 @@ const NavBar = ({onPress}) => {
         <li><NavLink to="contact-us">Contact Us</NavLink></li>
         <li>
           <Link to="create-new-post">
-            <button>Create New Post</button>
+            <button className="btn-new-post">Create New Post</button>
           </Link>
           </li>
       </ul>
