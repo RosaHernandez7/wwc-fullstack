@@ -1,7 +1,7 @@
 import React from 'react'
 
-export const contactUs = () => {
+export const ContactUs = () => {
   return (
-    <div>contactUs</div>
+    <div>ContactUs</div>
   )
 }

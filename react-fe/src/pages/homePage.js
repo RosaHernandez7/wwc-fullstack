@@ -2,7 +2,7 @@ import React from 'react'
 import FeaturedPost  from '../components/FeaturedPost';
 import ListPost from "../components/ListPost"; 
 
-export const homePage = ({posts, onEdit}) => {
+export const HomePage = ({posts, onEdit}) => {
     // console.log(posts);
   return (
     <>
@@ -14,7 +14,6 @@ export const homePage = ({posts, onEdit}) => {
             content={"Since the Pandemic started, we have experienced a growing dependency on technology in the healthcare industry, which demands continuous innovation to deal with the new health dangers."} 
             image={"https://www.w3schools.com/tags/img_girl.jpg"}
           />
-
           <ListPost posts={posts} onEdit={onEdit}/>
         </>
   );

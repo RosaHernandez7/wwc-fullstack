@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const error = () => {
+export const ErrorPage = () => {
   return (
     <div>Page not found</div>
   )

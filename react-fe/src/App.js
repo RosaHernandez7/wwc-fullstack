@@ -6,11 +6,11 @@ import posts from "./resources/posts";
 import CreatePost from "./pages/CreatePost";
 import React, { useState } from "react";
 import { Routes, Route, useNavigate } from "react-router-dom";
-import { joinOurTeam } from "./pages/joinOurTeam";
-import { contactUs } from "./pages/contactUs";
-import { homePage } from "./pages/homePage";
-import { detailPostPage } from "./pages/detailPostPage";
-import { errorPage } from "./components/errorPage";
+import { JoinOurTeam } from "./pages/JoinOurTeam";
+import { ContactUs } from "./pages/ContactUs";
+import { HomePage } from "./pages/HomePage";
+import { DetailPostPage } from "./pages/DetailPostPage";
+import { ErrorPage } from "./components/ErrorPage";
 
 function App() {
   const navigate = useNavigate();
@@ -56,10 +56,10 @@ function App() {
       <Routes>
         <Route
           index
-          element={<homePage posts={allPosts} onEdit={handleOnEdit} />}
+          element={<HomePage posts={allPosts} onEdit={handleOnEdit} />}
         />
-        <Route path="join-our-team" element={<joinOurTeam />} />
-        <Route path="contact-us" element={<contactUs />} />
+        <Route path="join-our-team" element={<JoinOurTeam />} />
+        <Route path="contact-us" element={<ContactUs />} />
         <Route path="*" element={<errorPage />} />
         <Route
           path="create-new-post"
@@ -69,7 +69,7 @@ function App() {
         />
         <Route
           path="post/:postId"
-          element={<detailPostPage findPostById={findPostById} />}
+          element={<DetailPostPage findPostById={findPostById} />}
         />
         {/* the url of the main page */}
       </Routes>

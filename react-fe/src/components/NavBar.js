@@ -7,7 +7,7 @@ const NavBar = ({onPress}) => {
   return (
     <div className="blog-post-navbar">
       <div className="blog-post-brand">
-      <Link to ="#">
+      <Link to ="/">
         <img
             src="https://itjuana.com/wp-content/uploads/ITJ_tm-logo.png"
             alt="itjuana logo"
