@@ -78,10 +78,12 @@
 
 .blog-post {
   display: flex;
+  /* flex-direction: column; acabo de añadir */
   flex-wrap: nowrap;
   margin-left: 12px !important;
   margin-right: 12px !important;
   margin-bottom: 60px;
+  text-align: center;
 }
 
 .blog-post-image {

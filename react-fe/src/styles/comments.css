@@ -1,0 +1,65 @@
+@import "./constants.css";
+.postComment{
+    background-color: var(--gray-medium-color);
+}
+
+.create-Comment {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 0 auto; /* Centramos el formulario */
+  width: 650px; /* Sin ancho no podemos centrar el formulario */
+  background-color: rgb(255, 255, 255); 
+  padding: 15px;
+  /* border-radius: 1em; */
+  gap: 20px;
+}
+.caption {
+  font-size: 2em;
+  font-family: "Ubuntu", sans-serif;
+  text-align: left;
+
+  font-weight: bold;
+  /* color: var(--blue-medium-color); */
+  color: rgb(131, 125, 125);
+}
+.create-Comment label {
+  display: inline-block; /**/
+  width: 70px;
+  color: rgb(131, 125, 125);
+  font-size: large;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.create-Comment input {
+  display: inline-block;
+  width: 500px;
+  padding: 5px;
+  border: 1px solid rgb(168, 161, 161);
+  border-radius: .5em;
+}
+
+.comment {
+  margin-left: 70px;
+}
+#commentBody {
+  width: 500px;
+  height: 100px;
+  border: 1px solid rgb(168, 161, 161);
+  border-radius:.5em;
+  resize: none;
+  padding: 5px;
+}
+
+.btn-send-comment{
+    padding:10px;
+    border: none;
+    color:white;
+    background-color:var(--green-medium-color);
+    border-radius:.5em;
+}
+.btn-send-comment:hover{
+    position: relative;
+    background-color: rgba(133, 145, 197, 0.418);
+    top:-2px;
+}
