@@ -1,6 +1,6 @@
 //como se veran los comentarios 
 import React, { useState,useEffect } from 'react';
-import getComments from "./getComments";
+// import getComments from "./getComments";
 //  console.log("estas en comentarios");
 
 const Comments = ({currentUserId }) => {
@@ -8,12 +8,12 @@ const Comments = ({currentUserId }) => {
   console.log(" comments: ", backendComments);
 
 
-  //triggered
-  useEffect(()=>{
-    getComments().then((data)=>{
-      setBackendComments(data);
-    });
-  },[])
+  // //triggered
+  // useEffect(()=>{
+  //   // getComments().then((data)=>{
+  //   //   setBackendComments(data);
+  //   // });
+  // },[])
     return (
       
    

@@ -1,13 +1,33 @@
-import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import Comments from "../components/Comments";
 import "../styles/comments.css";
 import CommentForm from "../components/CommentForm";
+import getComment from "../resources/getComments";
+import React, { useEffect, useState } from "react";
 
 export const DetailPostPage = ({ findPostById, onEdit }) => {
   const params = useParams();
   const { postId } = params;
   const post = findPostById(postId);
+
+  const navigate = useNavigate();
+  const [allComments, setAllComments] = useState(getComment());
+  const [commentId, setCommentId] = useState();
+
+  const handleOnSave = (comment) => {
+    if (commentId || commentId === 0) {
+      const copyOfComments = allComments.map((item, index) =>
+        index === commentId ? comment : item
+      ); //checar si el index es igual
+
+      setAllComments(copyOfComments);
+      setCommentId();
+    } else {
+      setAllComments([...allComments, comment]);
+    }
+  
+    // navigate("/"); //  
+  };
 
   return (
     <div>
@@ -36,8 +56,8 @@ export const DetailPostPage = ({ findPostById, onEdit }) => {
         ); */}
         </div>
       </div>
-      <Comments currentUserId="1 "/>
-      <CommentForm/>
+      {/* <Comments /> */}
+      <CommentForm onSave={handleOnSave} commentToUpdate={allComments[commentId]}/>
     </div>
   );
 };
