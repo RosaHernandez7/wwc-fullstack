@@ -1,7 +1,6 @@
 import "./styles/App.css";
 import NavBar from "./components/NavBar";
-import FeaturedPost from "./components/FeaturedPost";
-import ListPost from "./components/ListPost";
+
 import posts from "./resources/posts";
 // import CreatePost from "./pages/CreatePost";
 import React, { useEffect, useState } from "react";
@@ -47,28 +46,23 @@ function App() {
         index === postId ? post : item
       ); //checar si el index es igual
 
-      // const copyOfPosts = Array.from(allPosts);
-      // const newAllPosts = copyOfPosts.filter((post, index) => index !== postId);//[...copyOfPosts, post];
       setAllPosts(copyOfPosts);
       setPostId();
     } else {
       setAllPosts([...allPosts, post]);
     }
-    // setIsVisible(false); //onPress()
-    navigate("/"); //
 
-    // navigate("/", {replace:true})
+    navigate("/"); 
   };
 
   const handleOnEdit = (postId) => {
-    setIsVisible(true); //onPress()
+    setIsVisible(true); 
     setPostId(postId);
   };
 
   return (
     <div className="App">
       <NavBar />
-      {/* <NavBar onPress={()=>onPress()}/> */}
       <Routes>
         <Route
           index
@@ -87,29 +81,7 @@ function App() {
           path="post/:postId"
           element={<DetailPostPage findPostById={findPostById} />}
         />
-        {/* the url of the main page */}
       </Routes>
-
-      {
-        // isVisible ?
-        // <CreatePost
-        //   postToUpdate={allPosts[postId]}
-        //   onPress={()=>onPress()}
-        //   onSave={handleOnSave}
-        // />
-        // :
-        // <>
-        //   <FeaturedPost
-        //     updatedAt={"May 13 2021"}
-        //     height={250}
-        //     width={250}
-        //     title={"The Internet of Medical Things: The Healthcare Revolution"}
-        //     content={"Since the Pandemic started, we have experienced a growing dependency on technology in the healthcare industry, which demands continuous innovation to deal with the new health dangers."}
-        //     image={"https://www.w3schools.com/tags/img_girl.jpg"}
-        //   />
-        //   <ListPost posts={allPosts} onEdit={handleOnEdit}/>
-        // </>
-      }
     </div>
   );
 }

@@ -25,8 +25,6 @@ export const DetailPostPage = ({ findPostById, onEdit }) => {
     } else {
       setAllComments([...allComments, comment]);
     }
-  
-    // navigate("/"); //  
   };
 
   return (
@@ -49,11 +47,6 @@ export const DetailPostPage = ({ findPostById, onEdit }) => {
           <button className="btn-edit-post" onClick={() => onEdit()}>
             E&nbsp;d&nbsp;i&nbsp;t
           </button>
-          {/* const element = (
-        <button className="btn-edit-post" onClick={() => onEdit()}>
-          {setEditString(strEdit)}
-        </button>
-        ); */}
         </div>
       </div>
       {/* <Comments /> */}

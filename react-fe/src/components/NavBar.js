@@ -2,7 +2,6 @@ import React from "react";
 import "../styles/blog.css";
 import { Link, NavLink } from "react-router-dom";
 
-
 const NavBar = ({onPress}) => { 
   return (
     <div className="blog-post-navbar">
@@ -15,15 +14,7 @@ const NavBar = ({onPress}) => {
             height={80}
           />
       </Link>
-{/* 
-        <a href="https://itjuana.com/">
-          <img
-            src="https://itjuana.com/wp-content/uploads/ITJ_tm-logo.png"
-            alt="itjuana logo"
-            width={80}
-            height={80}
-          />
-        </a> */}
+
       </div>
       <ul>
         <li><NavLink to="join-our-team">Join our team</NavLink></li>
@@ -37,5 +28,4 @@ const NavBar = ({onPress}) => {
     </div>
   );
 }
-
-export default NavBar
+export default NavBar;
