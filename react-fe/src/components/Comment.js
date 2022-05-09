@@ -1,15 +1,27 @@
 import React from 'react'
-import Comments from './Comments';
-const Comment = () => {
-  return (
-    
+import { format } from 'date-fns'
+// import "../styles/comments1.css"
 
-    <>
-
-    <h2>Recent comments</h2>
-    <Comments currentUserId="1"/>
-  </>
-  )
+const Comment = ({ comment, onEdit, onDelete }) => {
+    console.log(comment);
+    return (
+        <div className='comment-container'>
+            <div className='date-container'>
+            <strong>{ comment.updatedAt && format(new Date(comment.updatedAt), 'MMMM dd, yyyy') }</strong>
+                <div>
+                    <button className="comment-post-btn" onClick={ () => onEdit() }>
+                        Edit
+                    </button>
+                    <button  className="comment-post-btn" onClick={ () => onDelete(comment._id) }>
+                    X
+                    </button>
+                </div>
+            </div>
+            <h1>{ comment.author }</h1>
+            <p>{ comment.comment }</p>
+            <hr/>
+        </div>
+    )
 }
 
-export default Comment;
+export default Comment

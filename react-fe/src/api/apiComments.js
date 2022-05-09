@@ -1,7 +1,9 @@
 const SERVER_URL = id => `http://localhost:8000/post/${id}/comments/`
 
 export const getComments = async postId => {
-	console.log("Fetching comments");
+	// console.log("Fetching comments");
+	console.log(`Fetching comments Y EL ID ES + ${postId}`);
+	
 	try {
 		const response = await fetch(SERVER_URL(postId))
 		if (response.status === 200)

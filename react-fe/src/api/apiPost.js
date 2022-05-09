@@ -1,5 +1,9 @@
 const URL_SERVER = "http://localhost:8000/post/";
-
+/**
+ * funciones fecth()
+ * async and await research that 
+ * @returns 
+ */
 export const getAllPost = async () => {
   try {
     const res = await fetch(URL_SERVER);
@@ -16,7 +20,6 @@ export const getPostById = async (id) => {
     console.log(error);
   }
 };
-
 export const createPost = async (post) => {
   try {
     const res = await fetch(URL_SERVER, {
@@ -29,7 +32,6 @@ export const createPost = async (post) => {
     console.log(error);
   }
 };
-
 export const updatePost = async (id, post) => {
   try {
     const res = await fetch(URL_SERVER + id, {
